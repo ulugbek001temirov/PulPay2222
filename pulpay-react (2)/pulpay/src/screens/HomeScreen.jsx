@@ -28,23 +28,23 @@ export default function HomeScreen({ onSwitch }) {
           <div className="card-image-container">
             <img src="/card.png" alt="card" className="card-image" />
             <div className="card-overlay">
-              <div className="overlay-card-number">4562&nbsp;&nbsp;1122&nbsp;&nbsp;4595&nbsp;&nbsp;7852</div>
+              <div className="overlay-card-number">4562&nbsp;1122&nbsp;4595&nbsp;7852</div>
               <div className="overlay-card-bottom">
-                <div className="overlay-field">
-                  <div className="overlay-label">Card Holder</div>
+                <div className="overlay-field overlay-name-block">
                   <div className="overlay-value">Aimal Naseem</div>
-                </div>
-                <div className="overlay-field">
-                  <div className="overlay-label">Expiry Date</div>
-                  <div className="overlay-value">24/2000</div>
-                </div>
-                <div className="overlay-field">
-                  <div className="overlay-label">CVV</div>
-                  <div className="overlay-value">6986</div>
+                  <div className="overlay-sub-row">
+                    <div className="overlay-sub-field">
+                      <div className="overlay-label">Expiry Date</div>
+                      <div className="overlay-value-small">24/2000</div>
+                    </div>
+                    <div className="overlay-sub-field">
+                      <div className="overlay-label">CVV</div>
+                      <div className="overlay-value-small">6986</div>
+                    </div>
+                  </div>
                 </div>
                 <div className="overlay-mastercard">
-                  <div className="mc mc-red" />
-                  <div className="mc mc-orange" />
+                  <img src="/mastercard.svg" alt="mastercard" className="mastercard-logo" />
                 </div>
               </div>
             </div>
