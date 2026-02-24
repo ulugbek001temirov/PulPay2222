@@ -150,7 +150,6 @@
 /* Вертикальный список */
 .tf-contacts-vertical {
   padding: 0 24px;
-  background: var(--card);
   border-top: 1px solid var(--border);
   border-bottom: 1px solid var(--border);
 }
