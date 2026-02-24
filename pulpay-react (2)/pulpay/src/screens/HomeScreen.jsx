@@ -12,46 +12,40 @@ export default function HomeScreen({ onSwitch }) {
     <div className="screen">
       <div className="scroll-area">
 
-        {/* Header */}
+        {/* Header - Profile Section */}
         <div className="home-header">
-          <div>
-            <div className="greeting">Welcome back</div>
-            <div className="user-name">PulPay</div>
+          <div className="profile-avatar">
+            <img src="/avatar.jpg" alt="Profile" className="profile-pic" />
           </div>
-          <div className="header-right">
-            <div className="search-btn">🔍</div>
-            <div className="avatar-circle">💠</div>
+          <div className="profile-info">
+            <div className="greeting">Welcome back,</div>
+            <div className="profile-name">Aimal Naseem</div>
           </div>
         </div>
 
         {/* Bank Card */}
         <div className="card-wrapper">
-          <div className="bank-card">
-            <div className="card-bg-circle card-bg-1" />
-            <div className="card-bg-circle card-bg-2" />
-            <div className="card-top">
-              <div className="card-chip">
-                <div className="chip-line" />
-              </div>
-              <span className="card-wifi">📶</span>
-            </div>
-            <div className="card-number">4562&nbsp;&nbsp;1122&nbsp;&nbsp;4595&nbsp;&nbsp;7852</div>
-            <div className="card-bottom">
-              <div className="card-field">
-                <div className="card-field-label">Card Holder</div>
-                <div className="card-field-value">AR Jonson</div>
-              </div>
-              <div className="card-field">
-                <div className="card-field-label">Expiry Date</div>
-                <div className="card-field-value">24/2000</div>
-              </div>
-              <div className="card-field">
-                <div className="card-field-label">CVV</div>
-                <div className="card-field-value">6986</div>
-              </div>
-              <div className="mastercard">
-                <div className="mc mc-red" />
-                <div className="mc mc-orange" />
+          <div className="card-image-container">
+            <img src="/card.png" alt="card" className="card-image" />
+            <div className="card-overlay">
+              <div className="overlay-card-number">4562&nbsp;&nbsp;1122&nbsp;&nbsp;4595&nbsp;&nbsp;7852</div>
+              <div className="overlay-card-bottom">
+                <div className="overlay-field">
+                  <div className="overlay-label">Card Holder</div>
+                  <div className="overlay-value">Aimal Naseem</div>
+                </div>
+                <div className="overlay-field">
+                  <div className="overlay-label">Expiry Date</div>
+                  <div className="overlay-value">24/2000</div>
+                </div>
+                <div className="overlay-field">
+                  <div className="overlay-label">CVV</div>
+                  <div className="overlay-value">6986</div>
+                </div>
+                <div className="overlay-mastercard">
+                  <div className="mc mc-red" />
+                  <div className="mc mc-orange" />
+                </div>
               </div>
             </div>
           </div>
