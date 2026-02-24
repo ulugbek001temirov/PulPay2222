@@ -35,11 +35,7 @@ export default function HomeScreen({ onSwitch }) {
                   <div className="overlay-sub-row">
                     <div className="overlay-sub-field">
                       <div className="overlay-label">Expiry Date</div>
-                      <div className="overlay-value-small">24/2000</div>
-                    </div>
-                    <div className="overlay-sub-field">
-                      <div className="overlay-label">CVV</div>
-                      <div className="overlay-value-small">6986</div>
+                      <div className="overlay-value-small">12/28</div>
                     </div>
                   </div>
                 </div>
