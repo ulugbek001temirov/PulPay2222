@@ -1,0 +1,341 @@
+/* Общие анимации */
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(15px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+.slide-up { animation: slideUp 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards; opacity: 0; }
+.fade-in { animation: fadeIn 0.3s ease forwards; opacity: 0; }
+
+.transfer-screen {
+  background-color: var(--bg);
+}
+
+.scroll-area {
+  padding-bottom: 90px; 
+}
+
+/* ─── ШАГ 1: ВЫБОР ПОЛУЧАТЕЛЯ ─── */
+.tf-header {
+  display: flex;
+  align-items: center;
+  padding: 16px 24px;
+  gap: 16px;
+}
+
+.back-btn {
+  background: none;
+  border: none;
+  color: var(--text);
+  font-size: 24px;
+  cursor: pointer;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  transition: opacity 0.2s;
+}
+.back-btn:active { opacity: 0.5; }
+
+.tf-tabs {
+  display: flex;
+  gap: 20px;
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--text3);
+}
+
+.tf-tabs span {
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+.tf-tabs span.active {
+  color: var(--text);
+}
+
+.tf-search-wrap {
+  margin: 0 24px 24px;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  padding: 4px 18px;
+  transition: border-color 0.2s;
+}
+
+.tf-search-wrap:focus-within {
+  border-color: var(--blue);
+}
+
+.tf-search-input {
+  flex: 1;
+  background: transparent;
+  border: none;
+  outline: none;
+  color: var(--text);
+  font-size: 16px;
+  font-family: var(--font);
+  font-weight: 500;
+  padding: 16px 0;
+  caret-color: var(--blue);
+}
+
+.tf-search-input::placeholder { color: var(--text3); }
+
+.tf-scan-btn {
+  background: rgba(61,90,241,0.08);
+  border: none;
+  color: var(--blue);
+  width: 36px;
+  height: 36px;
+  border-radius: 12px;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.tf-continue-btn {
+  margin: 0 24px 24px;
+  width: calc(100% - 48px);
+  background: linear-gradient(135deg, #3d5af1 0%, #5a78ff 100%);
+  color: #fff;
+  border: none;
+  padding: 16px;
+  border-radius: 18px;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+/* Горизонтальный список */
+.tf-horizontal-list {
+  display: flex;
+  gap: 12px;
+  overflow-x: auto;
+  padding: 0 24px 24px;
+  scrollbar-width: none;
+}
+.tf-horizontal-list::-webkit-scrollbar { display: none; }
+
+.h-contact-card {
+  min-width: 84px;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  padding: 16px 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+}
+
+.h-avatar {
+  width: 44px; height: 44px;
+  background: rgba(61,90,241,0.1);
+  border-radius: 14px;
+  display: flex; align-items: center; justify-content: center;
+  font-weight: 700; font-size: 18px; color: var(--blue);
+  margin-bottom: 10px;
+}
+
+.h-name { font-size: 13px; font-weight: 600; margin-bottom: 4px; color: var(--text); }
+.h-card-end { font-size: 11px; color: var(--text3); font-family: var(--mono); }
+
+/* Вертикальный список */
+.tf-contacts-vertical {
+  padding: 0 24px;
+  background: var(--card);
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
+
+.v-contact-row {
+  display: flex;
+  align-items: center;
+  padding: 16px 0;
+  border-bottom: 1px solid var(--border);
+  cursor: pointer;
+}
+.v-contact-row:last-child { border-bottom: none; }
+.v-contact-row:active { opacity: 0.7; }
+
+.v-avatar-wrap {
+  display: flex; align-items: center; gap: 12px; margin-right: 16px;
+}
+
+.v-bar {
+  width: 4px; height: 24px;
+  background: var(--blue);
+  border-radius: 2px;
+}
+
+.v-avatar {
+  width: 46px; height: 46px;
+  background: linear-gradient(135deg, #3d5af1, #6c8fff);
+  border-radius: 16px;
+  display: flex; align-items: center; justify-content: center;
+  font-weight: bold; font-size: 20px; color: #fff;
+}
+
+.v-info { flex: 1; }
+.v-name { font-size: 15px; font-weight: 600; color: var(--text); margin-bottom: 4px; }
+.v-desc { font-size: 13px; color: var(--text3); font-family: var(--mono); }
+.v-arrow { color: var(--text3); font-size: 22px; }
+
+
+/* ─── ШАГ 2: ВВОД СУММЫ ─── */
+.amount-step {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.tf-title {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--text);
+  margin: 0;
+}
+
+/* Блок карточек Откуда/Куда */
+.tf-cards-block {
+  margin: 16px 24px 24px;
+  display: flex;
+  flex-direction: column;
+}
+
+.tf-block-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 24px;
+  padding: 16px 20px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.tfc-logo {
+  width: 44px; height: 44px;
+  border-radius: 12px;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 22px;
+}
+.from-logo { background: rgba(61,90,241,0.1); color: var(--blue); }
+.to-logo { background: rgba(76, 175, 80, 0.1); color: var(--green); }
+
+.tfc-info { flex: 1; }
+.tfc-balance, .tfc-name { 
+  font-size: 16px; 
+  font-weight: 700; 
+  color: var(--text); 
+  margin-bottom: 4px; 
+}
+.tfc-desc { 
+  font-size: 13px; 
+  color: var(--text3); 
+  font-family: var(--mono); 
+}
+.tfc-arrow-down { color: var(--text3); font-size: 12px; }
+
+/* Стрелочка-соединитель между картами */
+.tf-connector-arrow {
+  width: 28px; height: 28px;
+  background: var(--bg); /* Цвет фона приложения, чтобы визуально "перебить" бордер */
+  border: 1px solid var(--border);
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 12px; color: var(--text2);
+  margin: -10px auto; /* Задвигаем между карточками */
+  position: relative;
+  z-index: 2;
+}
+
+/* Поле ввода суммы (Исправлено) */
+.tf-amount-input-wrap {
+  margin: 0 24px;
+  background: var(--card);
+  border: 1px solid var(--blue); /* Синий бордер как на скрине */
+  border-radius: 24px;
+  padding: 24px;
+  display: flex;
+  align-items: center;
+  /* Важно: box-sizing не дает паддингам расширить инпут за пределы экрана */
+  box-sizing: border-box;
+}
+
+.tf-amount-input {
+  flex: 1;
+  min-width: 0; /* Важно: не дает инпуту распирать флекс-контейнер */
+  background: transparent;
+  border: none;
+  outline: none;
+  color: var(--text);
+  font-size: 36px;
+  font-weight: 700;
+  font-family: var(--mono); /* Возвращаем твой фирменный пиксельный/моно шрифт */
+  caret-color: var(--blue);
+}
+
+.tf-amount-input::placeholder {
+  color: var(--text3);
+}
+
+.tf-amount-currency {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--text3);
+  margin-left: 10px;
+}
+.tf-amount-currency.active {
+  color: var(--text);
+}
+
+/* Кнопка внизу */
+.tf-bottom-action {
+  position: absolute;
+  bottom: 90px;
+  left: 0;
+  width: 100%;
+  padding: 0 24px; /* Безопасные отступы по бокам, как у инпутов */
+  box-sizing: border-box;
+  z-index: 100;
+  display: flex;
+  justify-content: center; /* Идеальное центрирование */
+}
+
+.tf-main-btn {
+  width: 100%;
+  max-width: 520px; /* Защита, чтобы на планшетах не была слишком длинной */
+  background: linear-gradient(135deg, #3d5af1 0%, #5a78ff 100%);
+  color: #fff;
+  border: none;
+  border-radius: 20px; /* Скругление под стиль остальных блоков */
+  padding: 18px 20px;
+  font-size: 17px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: opacity 0.16s, transform 0.12s, box-shadow 0.12s;
+  box-shadow: 0 10px 24px rgba(61,90,241,0.3);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.tf-main-btn:active:not(.disabled) { 
+  opacity: 0.9; 
+  transform: translateY(2px); /* Эффект нажатия */
+  box-shadow: 0 4px 12px rgba(61,90,241,0.2);
+}
+
+.tf-main-btn.disabled {
+  background: var(--border2);
+  color: var(--text3);
+  cursor: not-allowed;
+  box-shadow: none;
+}
